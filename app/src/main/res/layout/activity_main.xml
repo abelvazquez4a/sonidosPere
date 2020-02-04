@@ -4,14 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/zeldabackground"
     tools:context=".MainActivity">
 
     <Button
         android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="58dp"
-        android:layout_marginBottom="329dp"
+        android:layout_width="97dp"
+        android:layout_height="88dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginBottom="448dp"
+        android:background="@drawable/music"
+        android:backgroundTint="@android:color/background_light"
         android:onClick="sonido"
         android:text="SONIDO"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -19,9 +22,11 @@
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="55dp"
+        android:layout_width="123dp"
+        android:layout_height="141dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/video"
+        android:backgroundTint="@android:color/background_light"
         android:onClick="video"
         android:text="VIDEO"
         app:layout_constraintBaseline_toBaselineOf="@+id/button"
