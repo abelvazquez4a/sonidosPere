@@ -29,16 +29,11 @@ public class Sonido extends Activity implements OnPreparedListener, MediaControl
         mediaPlayer.setOnPreparedListener(this);
         mediaController = new MediaController(this);
         mediaController.setMediaPlayer(this);
-        mediaController.setAnchorView(findViewById(R.id.view_mediaController));
+        mediaController.setAnchorView(findViewById(R.id.activitySonido));
         ImageView gifImageLink = findViewById(R.id.imageView_song);
         gifImageLink.setBackgroundResource(R.drawable.gif);
         gifLink = (AnimationDrawable) gifImageLink.getBackground();
         gifLink.start();
-
-
-
-
-
     }
 
     @Override
@@ -105,7 +100,7 @@ public class Sonido extends Activity implements OnPreparedListener, MediaControl
     public void onPrepared(MediaPlayer mediaPlayer) {
         Log.d(TAG, "onPrepared");
         mediaController.setMediaPlayer(this);
-        mediaController.setAnchorView(findViewById(R.id.view_mediaController));
+        mediaController.setAnchorView(findViewById(R.id.activitySonido));
         handler.post(new Runnable() {
             public void run() {
                 mediaController.setEnabled(true);
