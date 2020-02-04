@@ -1,17 +1,22 @@
 package com.example.mediaapppere;
 
 import android.app.Activity;
+import android.graphics.drawable.AnimationDrawable;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
 import android.media.MediaPlayer.OnPreparedListener;
+import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.MediaController;
 
 public class Sonido extends Activity implements OnPreparedListener, MediaController.MediaPlayerControl{
 
+
+    AnimationDrawable gifLink;
     private static final String TAG = "AudioPlayer";
     private MediaPlayer mediaPlayer;
     private MediaController mediaController;
@@ -25,6 +30,14 @@ public class Sonido extends Activity implements OnPreparedListener, MediaControl
         mediaController = new MediaController(this);
         mediaController.setMediaPlayer(this);
         mediaController.setAnchorView(findViewById(R.id.view_mediaController));
+        ImageView gifImageLink = findViewById(R.id.imageView_song);
+        gifImageLink.setBackgroundResource(R.drawable.gif);
+        gifLink = (AnimationDrawable) gifImageLink.getBackground();
+        gifLink.start();
+
+
+
+
 
     }
 
@@ -100,6 +113,7 @@ public class Sonido extends Activity implements OnPreparedListener, MediaControl
             }
         });
     }
+
 
     public void tono1(View view) {
             mediaPlayer.stop();

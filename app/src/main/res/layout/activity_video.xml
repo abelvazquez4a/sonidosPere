@@ -4,6 +4,70 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/zeldabackground"
     tools:context=".Video">
+
+    <FrameLayout
+        android:id="@+id/primerVideo"
+        android:layout_width="359dp"
+        android:layout_height="235dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.189">
+
+        <VideoView
+            android:id="@+id/videoView"
+            android:layout_width="358dp"
+            android:layout_height="235dp" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/segundoVideo"
+        android:layout_width="359dp"
+        android:layout_height="235dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.826">
+
+        <VideoView
+            android:id="@+id/videoView2"
+            android:layout_width="358dp"
+            android:layout_height="235dp" />
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/button_video1"
+        android:layout_width="148dp"
+        android:layout_height="130dp"
+        android:background="@drawable/playbutton"
+        android:backgroundTint="@color/colorPrimary"
+        android:onClick="play1"
+        android:stateListAnimator="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.227" />
+
+    <Button
+        android:id="@+id/button_video2"
+        android:layout_width="148dp"
+        android:layout_height="130dp"
+        android:background="@drawable/playbutton"
+        android:backgroundTint="@color/colorPrimary"
+        android:onClick="play2"
+        android:stateListAnimator="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.77" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
