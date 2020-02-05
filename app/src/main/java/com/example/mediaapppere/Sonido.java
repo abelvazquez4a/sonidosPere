@@ -132,6 +132,7 @@ public class Sonido extends Activity implements OnPreparedListener, MediaControl
     }
     public void cancion(View view) {
             mediaPlayer.stop();
+            gifSword.setVisible(true,true);
             gifSword.start();
             mediaPlayer=MediaPlayer.create(getApplicationContext(), getResources().getIdentifier("zeldasong","raw",getPackageName()));
             mediaPlayer.start();
