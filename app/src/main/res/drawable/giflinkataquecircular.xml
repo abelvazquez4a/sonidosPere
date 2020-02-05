@@ -16,4 +16,5 @@
     <item android:drawable="@drawable/linkataquecircular13" android:duration="50" />
     <item android:drawable="@drawable/linkataquecircular14" android:duration="50" />
     <item android:drawable="@drawable/linkataquecircular15" android:duration="50" />
+    <item android:drawable="@drawable/linkataquecircular1" android:duration="50" />
 </animation-list>

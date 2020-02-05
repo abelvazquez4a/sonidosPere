@@ -11,6 +11,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.MediaController;
+import android.widget.Toast;
 
 public class Sonido extends Activity implements OnPreparedListener, MediaController.MediaPlayerControl{
 
@@ -37,12 +38,21 @@ public class Sonido extends Activity implements OnPreparedListener, MediaControl
         gifImageLinkAtaqueCircular.setBackgroundResource(R.drawable.giflinkataquecircular);
         gifSword = (AnimationDrawable) gifImageSword.getBackground();
         gifLink = (AnimationDrawable) gifImageLink.getBackground();
+        gifLinkAtaqueCircular = (AnimationDrawable) gifImageLinkAtaqueCircular.getBackground();
 
     }
 
     @Override
     protected void onStop() {
         super.onStop();
+        mediaController.hide();
+        mediaPlayer.stop();
+        mediaPlayer.release();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
         mediaController.hide();
         mediaPlayer.stop();
         mediaPlayer.release();
@@ -115,19 +125,35 @@ public class Sonido extends Activity implements OnPreparedListener, MediaControl
 
 
     public void tono1(View view) {
+
+        int i = ((int)(Math.random()*(3-1+1)+1));
             mediaPlayer.stop();
-            gifSword.stop();
+            if (gifSword.isRunning()){
+                gifSword.setVisible(true,true);
+                gifSword.stop();
+            }
+            gifLink.setVisible(true,true);
+            gifLink.stop();
             gifLink.start();
-            mediaPlayer=MediaPlayer.create(getApplicationContext(), getResources().getIdentifier("zelda","raw",getPackageName()));
+            mediaPlayer=MediaPlayer.create(getApplicationContext(), getResources().getIdentifier("attack"+i,"raw",getPackageName()));
+
             mediaPlayer.start();
             mediaController.show();
     }
     public void tono2(View view) {
+        if (gifSword.isRunning()){
+            gifSword.setVisible(true,true);
             gifSword.stop();
+        }
+        MediaPlayer swordfEffect = MediaPlayer.create(getApplicationContext(),getResources().getIdentifier("spineffect","raw",getPackageName()));
             mediaPlayer.stop();
+            gifLinkAtaqueCircular.setVisible(true,true);
+            gifLinkAtaqueCircular.stop();
             gifLinkAtaqueCircular.start();
-            mediaPlayer=MediaPlayer.create(getApplicationContext(), getResources().getIdentifier("item","raw",getPackageName()));
+            gifLinkAtaqueCircular.setVisible(true,true);
+            mediaPlayer=MediaPlayer.create(getApplicationContext(), getResources().getIdentifier("spin","raw",getPackageName()));
             mediaPlayer.start();
+            swordfEffect.start();
             mediaController.show();
     }
     public void cancion(View view) {
@@ -136,6 +162,7 @@ public class Sonido extends Activity implements OnPreparedListener, MediaControl
             gifSword.start();
             mediaPlayer=MediaPlayer.create(getApplicationContext(), getResources().getIdentifier("zeldasong","raw",getPackageName()));
             mediaPlayer.start();
+
             mediaController.show();
     }
 }
