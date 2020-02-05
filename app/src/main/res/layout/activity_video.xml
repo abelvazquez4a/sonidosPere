@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/zeldabackground"
+    android:background="@drawable/videobackg"
     tools:context=".Video">
 
     <FrameLayout
@@ -21,7 +21,8 @@
         <VideoView
             android:id="@+id/videoView"
             android:layout_width="358dp"
-            android:layout_height="235dp" />
+            android:layout_height="235dp"
+            android:visibility="invisible" />
     </FrameLayout>
 
     <FrameLayout
@@ -37,7 +38,8 @@
         <VideoView
             android:id="@+id/videoView2"
             android:layout_width="358dp"
-            android:layout_height="235dp" />
+            android:layout_height="235dp"
+            android:visibility="invisible" />
     </FrameLayout>
 
     <Button

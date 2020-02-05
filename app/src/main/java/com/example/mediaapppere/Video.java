@@ -33,15 +33,19 @@ public class Video extends AppCompatActivity {
         visor2.setMediaController(mediaController2);
     }
 
+
+    public void play1(View view) {
+        buttonPlay1.setVisibility(View.INVISIBLE);
+        visor1.setVisibility(View.VISIBLE);
+        visor1.start();
+        mediaController1.show();
+    }
+
     public void play2(View view) {
         buttonPlay2.setVisibility(View.INVISIBLE);
+        visor2.setVisibility(View.VISIBLE);
         visor2.start();
         mediaController2.show();
     }
 
-    public void play1(View view) {
-        buttonPlay1.setVisibility(View.INVISIBLE);
-        visor1.start();
-        mediaController1.show();
-    }
 }
