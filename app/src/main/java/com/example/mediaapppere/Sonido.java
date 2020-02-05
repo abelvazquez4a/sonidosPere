@@ -15,8 +15,7 @@ import android.widget.MediaController;
 public class Sonido extends Activity implements OnPreparedListener, MediaController.MediaPlayerControl{
 
 
-    AnimationDrawable gifSword;
-    AnimationDrawable gifLink;
+    AnimationDrawable gifSword, gifLink, gifLinkAtaqueCircular;
     private static final String TAG = "AudioPlayer";
     private MediaPlayer mediaPlayer;
     private MediaController mediaController;
@@ -32,8 +31,10 @@ public class Sonido extends Activity implements OnPreparedListener, MediaControl
         mediaController.setAnchorView(findViewById(R.id.activitySonido));
         ImageView gifImageSword = findViewById(R.id.imageView_song);
         ImageView gifImageLink = findViewById(R.id.imageView_link);
+        ImageView gifImageLinkAtaqueCircular = findViewById(R.id.imageView_ataqueCircular);
         gifImageLink.setBackgroundResource(R.drawable.giflink);
         gifImageSword.setBackgroundResource(R.drawable.gif);
+        gifImageLinkAtaqueCircular.setBackgroundResource(R.drawable.giflinkataquecircular);
         gifSword = (AnimationDrawable) gifImageSword.getBackground();
         gifLink = (AnimationDrawable) gifImageLink.getBackground();
 
@@ -115,13 +116,16 @@ public class Sonido extends Activity implements OnPreparedListener, MediaControl
 
     public void tono1(View view) {
             mediaPlayer.stop();
+            gifSword.stop();
             gifLink.start();
             mediaPlayer=MediaPlayer.create(getApplicationContext(), getResources().getIdentifier("zelda","raw",getPackageName()));
             mediaPlayer.start();
             mediaController.show();
     }
     public void tono2(View view) {
+            gifSword.stop();
             mediaPlayer.stop();
+            gifLinkAtaqueCircular.start();
             mediaPlayer=MediaPlayer.create(getApplicationContext(), getResources().getIdentifier("item","raw",getPackageName()));
             mediaPlayer.start();
             mediaController.show();

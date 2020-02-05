@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="true">
+    <item android:drawable="@drawable/linkataquecircular1" android:duration="50" />
+    <item android:drawable="@drawable/linkataquecircular2" android:duration="50" />
+    <item android:drawable="@drawable/linkataquecircular3" android:duration="50" />
+    <item android:drawable="@drawable/linkataquecircular4" android:duration="50" />
+    <item android:drawable="@drawable/linkataquecircular5" android:duration="50" />
+    <item android:drawable="@drawable/linkataquecircular6" android:duration="50" />
+    <item android:drawable="@drawable/linkataquecircular7" android:duration="50" />
+    <item android:drawable="@drawable/linkataquecircular8" android:duration="50" />
+    <item android:drawable="@drawable/linkataquecircular9" android:duration="50" />
+    <item android:drawable="@drawable/linkataquecircular10" android:duration="50" />
+    <item android:drawable="@drawable/linkataquecircular11" android:duration="50" />
+    <item android:drawable="@drawable/linkataquecircular12" android:duration="50" />
+    <item android:drawable="@drawable/linkataquecircular13" android:duration="50" />
+    <item android:drawable="@drawable/linkataquecircular14" android:duration="50" />
+    <item android:drawable="@drawable/linkataquecircular15" android:duration="50" />
+</animation-list>
