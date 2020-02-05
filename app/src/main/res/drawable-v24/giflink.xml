@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="true">
+    <item android:drawable="@drawable/linkgif1" android:duration="50" />
+    <item android:drawable="@drawable/linkgif2" android:duration="50" />
+    <item android:drawable="@drawable/linkgif3" android:duration="50" />
+    <item android:drawable="@drawable/linkgif4" android:duration="50" />
+    <item android:drawable="@drawable/linkgif5" android:duration="50" />
+    <item android:drawable="@drawable/linkgif6" android:duration="50" />
+    <item android:drawable="@drawable/linkgif7" android:duration="50" />
+    <item android:drawable="@drawable/linkgif8" android:duration="50" />
+    <item android:drawable="@drawable/linkgif9" android:duration="50" />
+    <item android:drawable="@drawable/linkgif10" android:duration="50" />
+    <item android:drawable="@drawable/linkgif11" android:duration="50" />
+    <item android:drawable="@drawable/linkgif12" android:duration="50" />
+    <item android:drawable="@drawable/linkgif13" android:duration="50" />
+    <item android:drawable="@drawable/linkgif14" android:duration="50" />
+    <item android:drawable="@drawable/linkgif15" android:duration="50" />
+    <item android:drawable="@drawable/linkgif16" android:duration="50" />
+    <item android:drawable="@drawable/linkgif17" android:duration="50" />
+    <item android:drawable="@drawable/linkgif18" android:duration="50" />
+    <item android:drawable="@drawable/linkgif19" android:duration="50" />
+</animation-list>

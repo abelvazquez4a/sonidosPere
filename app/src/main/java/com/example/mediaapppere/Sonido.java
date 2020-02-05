@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
 import android.media.MediaPlayer.OnPreparedListener;
-import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
@@ -16,6 +15,7 @@ import android.widget.MediaController;
 public class Sonido extends Activity implements OnPreparedListener, MediaController.MediaPlayerControl{
 
 
+    AnimationDrawable gifSword;
     AnimationDrawable gifLink;
     private static final String TAG = "AudioPlayer";
     private MediaPlayer mediaPlayer;
@@ -30,10 +30,13 @@ public class Sonido extends Activity implements OnPreparedListener, MediaControl
         mediaController = new MediaController(this);
         mediaController.setMediaPlayer(this);
         mediaController.setAnchorView(findViewById(R.id.activitySonido));
-        ImageView gifImageLink = findViewById(R.id.imageView_song);
-        gifImageLink.setBackgroundResource(R.drawable.gif);
+        ImageView gifImageSword = findViewById(R.id.imageView_song);
+        ImageView gifImageLink = findViewById(R.id.imageView_link);
+        gifImageLink.setBackgroundResource(R.drawable.giflink);
+        gifImageSword.setBackgroundResource(R.drawable.gif);
+        gifSword = (AnimationDrawable) gifImageSword.getBackground();
         gifLink = (AnimationDrawable) gifImageLink.getBackground();
-        gifLink.start();
+
     }
 
     @Override
@@ -112,6 +115,7 @@ public class Sonido extends Activity implements OnPreparedListener, MediaControl
 
     public void tono1(View view) {
             mediaPlayer.stop();
+            gifLink.start();
             mediaPlayer=MediaPlayer.create(getApplicationContext(), getResources().getIdentifier("zelda","raw",getPackageName()));
             mediaPlayer.start();
             mediaController.show();
@@ -124,6 +128,7 @@ public class Sonido extends Activity implements OnPreparedListener, MediaControl
     }
     public void cancion(View view) {
             mediaPlayer.stop();
+            gifSword.start();
             mediaPlayer=MediaPlayer.create(getApplicationContext(), getResources().getIdentifier("zeldasong","raw",getPackageName()));
             mediaPlayer.start();
             mediaController.show();
