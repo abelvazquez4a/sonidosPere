@@ -44,18 +44,24 @@ public class Sonido extends Activity implements OnPreparedListener, MediaControl
 
     @Override
     protected void onStop() {
-        super.onStop();
         mediaController.hide();
-        mediaPlayer.stop();
-        mediaPlayer.release();
+        if (mediaPlayer.isPlaying()){
+            mediaPlayer.stop();
+           // mediaPlayer.release();
+        }
+        if (gifSword.isRunning()) gifSword.stop();
+        super.onStop();
     }
 
     @Override
     protected void onPause() {
-        super.onPause();
         mediaController.hide();
-        mediaPlayer.stop();
-        mediaPlayer.release();
+        if (mediaPlayer.isPlaying()){
+            mediaPlayer.stop();
+           // mediaPlayer.release();
+        }
+        if (gifSword.isRunning()) gifSword.stop();
+        super.onPause();
     }
 
     @Override
@@ -136,7 +142,6 @@ public class Sonido extends Activity implements OnPreparedListener, MediaControl
             gifLink.stop();
             gifLink.start();
             mediaPlayer=MediaPlayer.create(getApplicationContext(), getResources().getIdentifier("attack"+i,"raw",getPackageName()));
-
             mediaPlayer.start();
             mediaController.show();
     }

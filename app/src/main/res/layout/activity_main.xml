@@ -11,15 +11,14 @@
         android:id="@+id/button2"
         android:layout_width="116dp"
         android:layout_height="120dp"
-        android:background="@drawable/videorojo"
-        android:backgroundTint="@color/colorPrimary"
+        android:background="@drawable/key"
         android:onClick="video"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.532"
+        app:layout_constraintHorizontal_bias="0.054"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.815" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <ImageView
         android:id="@+id/imageView_linkrun"
